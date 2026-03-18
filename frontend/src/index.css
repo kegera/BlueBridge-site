@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --primary: #1E5EFF;
+    --navy: #0B1B3A;
+    --teal: #11B5A4;
+    --warm: #FFB020;
+    --bg: #F6F8FF;
+    --surface: #fff;
+    --border: #E2E9FF;
+    --text: #0A1020;
+    --muted: #5A6A8A;
+    --radius: 20px;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Plus Jakarta Sans', sans-serif; background: var(--bg); color: var(--text); overflow-x: hidden; }
+  h1,h2,h3,h4,h5,h6 { font-family: 'Manrope', sans-serif; }
+}
+
+@layer utilities {
+  .font-heading { font-family: 'Manrope', sans-serif; }
+  .glass { background: rgba(255,255,255,0.75); backdrop-filter: blur(12px); border: 1.5px solid var(--border); }
+  .glass-nav { background: rgba(246,248,255,0.85); backdrop-filter: blur(18px); }
+  .gradient-primary { background: linear-gradient(135deg, #1E5EFF, #3a7aff); }
+  .gradient-teal { background: linear-gradient(135deg, #11B5A4, #00d4c3); }
+  .gradient-warm { background: linear-gradient(135deg, #FFB020, #ffd060); }
+  .gradient-text { background: linear-gradient(135deg, #1E5EFF, #11B5A4); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+  .card-hover { transition: transform .22s, box-shadow .22s; }
+  .card-hover:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(14,30,80,.12); }
+}
